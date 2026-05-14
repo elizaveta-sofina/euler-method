@@ -13,17 +13,21 @@ body {
 /*Главный экран*/
 .container_heading {
     display: flex;
+    position: relative;
     height: clamp(518px, 63vw, 959px);
     width: 100%;
-    background: #cfd3b3;
     flex-direction: column;
     justify-content: center;
+    img {
+        position: absolute;
+        top: 0px; 
+        z-index: -1;
+    }
     .heading {
         display: flex;
         flex-direction: column;
         bottom: 50%;;
         gap: clamp(15px, 4vw,49px);
-        background: #cfd3b3;
         align-items: center;
         h1 {
             font-weight: 800;
@@ -39,8 +43,8 @@ body {
 }
 
 .container {
-    width: 100%;
-    margin: auto;
+    position: relative;
+    margin: 0 auto;
     text-align: center;
     padding: 0 clamp(20px, 5vw,85px);
     /*Теория*/
@@ -49,7 +53,7 @@ body {
         flex-direction: column;
         gap: clamp(20px, 5vw, 69px);
         width: auto;
-        margin: clamp(110px, 12vw, 180px) auto;
+        margin: clamp(110px, 10vw, 150px) auto;
         h1 {
             font-size: clamp(16px, 4vw,53px);
             font-weight: 800;
@@ -73,6 +77,7 @@ body {
             }
         }
     }
+
     /*Калькулятор*/
     .calc {
         display: flex;
@@ -266,7 +271,7 @@ body {
     /* Решение */
     .results_f_and_t {
         font-family: 'Segoe UI';
-        margin-bottom: 60px;
+        margin-bottom: 70px;
         .solution-title{
             font-size: clamp(22px, 3.2vw, 48px);
             margin-bottom: clamp(14px, 2vw, 30px);
@@ -314,12 +319,17 @@ body {
             color: #4d5641;
         }
     }
+    .png_bottom {
+        position: absolute;
+        left: 0;
+        z-index: -1;
+    }
 }
 
 @media (max-width: 900px) {
     .container {
-        .heading {
-            margin: 150px auto;
+        .theory {
+            margin: 0 auto;
         }
     }
 }
