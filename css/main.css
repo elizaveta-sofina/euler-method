@@ -13,6 +13,7 @@ body {
 /*Главный экран*/
 .container_heading {
     display: flex;
+    overflow: hidden;
     position: relative;
     height: clamp(518px, 63vw, 959px);
     width: 100%;
