@@ -20,11 +20,12 @@ body {
     justify-content: center;
     img {
         position: absolute;
-        top: 0px; 
-        z-index: -1;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: auto;
-        display: block;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
     }
     .heading {
         display: flex;
