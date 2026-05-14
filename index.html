@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!--Шрифты-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+    <!--JS-->
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@11.11.2/lib/browser/math.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <!--Главный экран-->
+    <div class="container_heading">
+        <div class="heading">
+            <h1>МЕТОД ЭЙЛЕРА</h1>
+            <p>ОНЛАЙН</p>
+        </div>
+    </div>
+
+    <!--Теория-->
+    <div class="container">
+        <section class="theory">
+            <h1>ТЕОРИЯ</h1>
+            <p>МЕТОД ЭЙЛЕРА — ЭТО ПРОСТОЙ ЧИСЛЕННЫЙ СПОСОБ РЕШЕНИЯ ОБЫКНОВЕННЫХ ДИФФЕРЕНЦИАЛЬНЫХ УРАВНЕНИЙ ПЕРВОГО ПОРЯДКА.</p>
+            <ol>
+                <li>1. ВВЕДИТЕ ФУНКЦИЮ F(x, y)</li>
+                <li>2. ЗАДАЙТЕ НАЧАЛЬНОЕ УСЛОВИЕ (x₀ и y₀)</li>
+                <li>3. УКАЖИТЕ ШАГ (h) И КОЛИЧЕСТВО ШАГОВ (s)</li>
+                <li>4. НАЖМИТЕ «РЕШИТЬ»</li>
+            </ol>
+        </section>
+        
+        <!--Калькулятор-->
+        <section class="calc">
+            <h1>ВЫЧИСЛЕНИЯ</h1>
+            <div class="grid_1">
+                <div class="input-wrapper">
+                    <label>
+                        y' =
+                        <input id="func" autocomplete="off">
+                    </label>
+                    <div class="field-error" id="func-error"></div>
+                </div>
+                <div class="grid_2">
+                    <div class="input-wrapper">
+                        <label>
+                            x₀ =
+                            <input id="x0" autocomplete="off">
+                        </label>
+                        <div class="field-error" id="x0-error"></div>
+                    </div>
+                    <div class="input-wrapper">
+                        <label>
+                            h =
+                            <input id="h" autocomplete="off">
+                        </label>
+                        <div class="field-error" id="h-error"></div>
+                    </div>
+                </div>
+                <div class="grid_2">
+                    <div class="input-wrapper">
+                        <label>
+                            y₀ =
+                            <input id="y0" autocomplete="off">
+                        </label>
+                        <div class="field-error" id="y0-error"></div>
+                    </div>
+                    <div class="input-wrapper">
+                        <label>
+                            s =
+                            <input id="steps" autocomplete="off">
+                        </label>
+                        <div class="field-error" id="steps-error"></div>
+                    </div>
+                </div>
+                <div class="grid_3">
+                    <button onclick="solve()">решить</button>
+                    <button class="reset" onclick="resetAll()">сбросить</button>
+                </div>
+            </div>
+        </section>
+
+        <!--График и таблица-->
+        <section class="results hidden" id="results">
+            <div class="results_f_and_t">
+                <h3>ГРАФИК</h3>
+                <canvas id="graph"></canvas>
+            </div>
+
+            <div class="results_f_and_t">
+                <h3>ТАБЛИЦА</h3>
+                <div id="table"></div>
+            </div>
+        </section>
+        <div class="results_f_and_t hidden" id="solution-block">
+            <div id="euler-solution"></div>
+        </div>
+    </div>
+</body>
+</html>
