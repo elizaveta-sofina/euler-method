@@ -82,6 +82,7 @@ body {
         width: 100%;
         max-width: 873px;
         padding: clamp(150px, 16.6vw, 250px) 0;
+        margin: auto;
         gap: clamp(19px, 3vw, 30px);
         &.compact {
             padding: clamp(60px, 6vw, 100px) 0;
