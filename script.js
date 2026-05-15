@@ -229,6 +229,7 @@ function solve() {
 
     table.innerHTML = html;
     results.classList.remove("hidden");
+    document.querySelector(".calc").classList.add("compact");
     document.getElementById("solution-block")
         .classList.remove("hidden");
 
@@ -377,6 +378,7 @@ function resetAll() {
 
     document.getElementById("table").innerHTML = "";
     document.getElementById("results").classList.add("hidden");
+    document.querySelector(".calc").classList.remove("compact");
     document.getElementById("solution-block")
         .classList.add("hidden");
 
