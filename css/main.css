@@ -1,6 +1,7 @@
 @import './reset.css';
 
 *{
+    border: 1px solid red;
     font-family: "Manrope", sans-serif;
     font-style: normal;
 }
@@ -10,31 +11,21 @@ body {
     background: #FDFFF4;
 }
 
-/*Главный экран*/
-.container_heading {
-    display: flex;
-    overflow: hidden;
+.container {
+    
+    /*Главный экран*/
     position: relative;
-    height: clamp(518px, 63vw, 959px);
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
+    text-align: center;
+    padding: 0 clamp(20px, 5vw,85px);
     img {
         position: absolute;
-        top: 0;
         left: 0;
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        object-fit: cover;
-        display: block;
         z-index: -1;
-        pointer-events: none;
     }
     .heading {
+        margin: clamp(156px, 22vw, 400px) 0;
         display: flex;
         flex-direction: column;
-        bottom: 50%;;
         gap: clamp(15px, 4vw,49px);
         align-items: center;
         h1 {
@@ -48,13 +39,7 @@ body {
             letter-spacing: 5px;
         }
     }
-}
 
-.container {
-    position: relative;
-    margin: 0 auto;
-    text-align: center;
-    padding: 0 clamp(20px, 5vw,85px);
     /*Теория*/
     .theory {
         display: flex;
